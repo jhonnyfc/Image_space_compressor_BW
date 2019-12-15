@@ -1,0 +1,16 @@
+clear
+clc
+
+c = 16;
+alpha = 0.005;
+umbral = 0;
+maxIter = 200;
+
+imagen = imread("circles.png");
+imshow(imagen,'');
+
+R = double(imagen);%%Imagen origianl
+R = R/255;
+
+imRed = reduccionImagen(R,c,alpha,umbral,maxIter);
+imshow(imRed);
